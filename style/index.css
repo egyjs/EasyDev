@@ -1,0 +1,91 @@
+
+ul{
+    list-style: none;
+}
+.l{
+    float:left ;
+}
+.r{
+    float:right ;
+}
+#session {
+  position: relative;
+  margin: 100px auto;
+  width: 350px;
+  left: 50px;
+  border-top: solid 1px #EBEBEB;
+  background: #2ECC71;
+  padding: 11px;
+}
+h2 {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 10px;
+}
+
+p.reset {
+  margin: 10px 4px;
+}
+fieldset {
+  border: 0;
+  border-bottom: solid 1px #ddd;
+}
+.commonForm fieldset p input[type=text], .commonForm fieldset p input[type=password] {
+  display: inline-block;
+  background-color: #F9F9F9;
+  width: 300px;
+  padding: 8px;
+  border: solid 1px #c4c7cb;
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 1px #e0e4e9;
+  outline: none;
+}
+.commonForm input[type=submit] {
+  border-radius: 3px;
+  padding: 10px 20px;
+  background: #FFFFFF;
+  border: none;
+  color: #2795ee;
+  font-size: .9em;
+  font-weight: 700;
+  cursor: pointer;
+}
+a{
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+a:hover{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.lang {
+  background: #548C6C;
+  padding: 4px 0px 16px;
+  width: 41%;
+}
+.oor {
+  background: #fff;
+  padding: 4px;
+  color: #2795ee;
+  border-radius: 100px;
+  margin: 9px;
+}
+.liLang{
+  float: left;
+  margin: auto 5px;
+  border-left: 2px solid;
+  padding: 0 9px;
+}
+
+footer {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.58);
+  position: fixed;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  bottom: 0;
+  color: #0d0d0d;
+}

@@ -1,0 +1,59 @@
+body{
+    background: #27AE60;
+}
+.container {
+  margin: 0 auto;
+  width: 88%;
+  background-color: #2ECC71;
+  padding: 10px;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.allBox {
+  padding: 18px;
+  overflow: auto;
+}
+.boxSize {
+  overflow: hidden;
+  float: right;
+  margin: auto 13px;
+  background: #ECF0F1;
+  border: 1px solid #27AE60;
+  padding: 0 54px;
+  color: #bdc3c7;
+}
+input[type="submit"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  color: #FFF;
+}
+.buy-now {
+  width: 247px;
+  display: block;
+  bottom: 20px;
+  text-align: center;
+  background: #3498DB;
+  line-height: 45px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-shadow: 0 1px 1px #257797;
+  margin: 10px auto;
+}
+.bronze {
+      background: #FFB872;
+}
+footer {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.58);
+  position: fixed;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  bottom: 0;
+  color: #FFFFFF;
+}

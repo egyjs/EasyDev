@@ -1,0 +1,69 @@
+body {
+  font-family: cursive;
+}
+.table {
+  background-color: #F5f5f5;
+  padding: 10px 75px;
+  width: 100%;
+}
+th {
+  border: 1px solid;
+  padding: 4px 9px;
+  text-align: left;
+}
+th {
+  border-right: 1px solid #1855af;
+  border-left: 1px solid #4d87bd;
+}
+ th {
+  border: none;
+  font-size: 13px;
+  background: url(src/cart_table_head.png) top left repeat-x;
+  font-family: 'Open Sans',sans-serif;
+  color: #fff;
+  text-shadow: 0 -1px 1px #214872;
+  border-top: 1px solid #1855af;
+  border-bottom: 1px solid #1855af;
+}
+ td {
+  background: #f1f1f1;
+}
+td {
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  background: #fafafa;
+  color: #3d3d3d;
+  font-size: 14px;
+}
+.container {
+  margin: 0 auto;
+  width: 88%;
+  background-color: #F1F1F1;
+  padding: 10px;
+}
+form {
+  background-color: #F5F5F5;
+  padding: 10px;
+}
+label {
+  cursor: pointer;
+}
+.group {
+  margin: 20px;
+}
+input ,select {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #DCDCDC;
+}
+.list {
+  border-bottom: 2px solid #DCDCDC;
+}
+input[type="submit"] {
+  cursor: pointer;
+  background: url(src/cart_table_head.png) top left repeat-x;
+  color: #fff;
+}
+input[type="submit"]:hover {
+  background: #326da2;
+}

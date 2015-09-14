@@ -1,0 +1,12 @@
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
+
+ErrorDocument 400 /index.php
+ErrorDocument 401 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+
+RewriteRule ^u/([0-9أ-يa-zA-Z_.]+) index.php?u=$1&w=$1 [NC,L]
+RewriteRule ^u/w/([0-9أ-يa-zA-Z_.]+) index.php?u=$1&w=$2 [NC,L]
