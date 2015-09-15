@@ -14,31 +14,31 @@ $buy = $_SESSION["buy"];
 @$email =  htmlspecialchars($_POST['email']);
 $valEmail = "";
 if(isset($email)){
-    @$valEmail =  $_POST['email'];
+    @$valEmail =  mysql_real_escape_string($_POST['email']);
 }
 @$fname =  htmlspecialchars($_POST['fname']);
 $valfname = "";
 if(isset($fname)){
-    @$valfname = $_POST['fname'];
+    @$valfname = mysql_real_escape_string($_POST['fname']);
 }
 @$lname =  htmlspecialchars($_POST['lname']);
 $vallname = "";
 if(isset($lname)){
-    @$vallname = $_POST['lname'];
+    @$vallname = mysql_real_escape_string($_POST['lname']);
 }
 
 @$address =  htmlspecialchars($_POST['address']);
 $valaddress = "";
 if(isset($address)){
-    @$valaddress = $_POST['address'];
+    @$valaddress = mysql_real_escape_string($_POST['address']);
 }
 @$city =  htmlspecialchars($_POST['city']);
 $valcity = "";
 if(isset($city)){
-    @$valcity = $_POST['city'];
+    @$valcity = mysql_real_escape_string($_POST['city']);
 }
-@$pass1 =  htmlspecialchars($_POST['pass1']);
-@$country =  htmlspecialchars($_POST['country']);
+@$pass1 =  htmlspecialchars(mysql_real_escape_string($_POST['pass1']));
+@$country =  htmlspecialchars(mysql_real_escape_string($_POST['country']));
 
 
 
@@ -143,7 +143,7 @@ echo 'Registration has been successfully your hello '.$_POST['fname']
            /////////////////ENDtoMysql////////////////
                 ?>           
             </center>
-            <form  method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <form  method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
                <?php
                 $txt4Frc =''
                          .'<input type="hidden" name="ip"  value="'.$ip.'" />'
