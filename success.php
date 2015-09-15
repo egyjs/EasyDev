@@ -4,6 +4,7 @@ include 'inc/config.php';
 <?php 
 session_start();
 $emailS = $_SESSION["email"];
+$emailS = htmlspecialchars($emailS);
 include 'function.php';
 $ip = get_ip();
 $buttonPaypal = "";
