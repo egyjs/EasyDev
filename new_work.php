@@ -32,7 +32,7 @@ $imgProfileCode = md5( strtolower( trim( $_SESSION['uemail'] ) ) );
                                         <form class="w3-container w3-card-4 w3-white" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
                                             <?php
                                             if (isset($_POST['go'])) {
-                                                $idI = htmlspecialchars($_POST['u_id']);
+                                                $idI = htmlspecialchars(mysql_real_escape_string($_POST['u_id']));
                                                 $insert = mysql_query("Insert into `workspace` VALUES (NULL, '".htmlspecialchars($_POST['name'])."', '".htmlspecialchars($_POST['des'])."', '".htmlspecialchars($_POST['privacy'])."', '$idI')");
                                             if($insert){
                             $sql  = mysql_query("SELECT * FROM `workspace`  WHERE w_u_id='$idI'")OR DIE (MYSQL_ERROR());
