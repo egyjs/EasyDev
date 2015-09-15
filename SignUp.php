@@ -7,6 +7,9 @@ if (isset($_POST['buy'])){
 if (isset($_SESSION['buy'])){
     $buy = $_SESSION['buy'];
 }
+
+$php_self = htmlspecialchars($_SERVER['PHP_SELF']);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +37,7 @@ include 'inc/config.php';
                             ideiw7gduoug7duiuig78a
                         </p>
                     </div>
-                    <form action="<?php $_SERVER['PHP_SELF']?>" method="post" >
+                    <form action="<?php echo $php_self; ?>" method="post" >
                         <a href="#"  class="buy-now" ><input class="buy-now" type="submit" value="bronze" name="buy"></a>
                     </form>
                 </div>
@@ -50,7 +53,7 @@ include 'inc/config.php';
                             ideiw7gduoug7duiuig78a
                         </p>
                     </div>
-                    <form action="<?php $_SERVER['PHP_SELF']?>" method="post" >
+                    <form action="<?php echo $php_self; ?>" method="post" >
                         <a href="#"  class="buy-now" ><input class="buy-now" type="submit" value="silver" name="buy"></a>
                     </form>
                 </div>
@@ -66,7 +69,7 @@ include 'inc/config.php';
                             ideiw7gduoug7duiuig78a
                         </p>
                     </div>
-                    <form action="<?php $_SERVER['PHP_SELF']?>" method="post" >
+                    <form action="<?php echo $php_self; ?>" method="post" >
                         <a href="#"  class="buy-now" ><input class="buy-now" type="submit" value="golden" name="buy"></a>
                     </form>                </div>
 
