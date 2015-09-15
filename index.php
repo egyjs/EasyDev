@@ -1,8 +1,8 @@
 <?php
 include 'inc/config.php';
 session_start();
-$user = @$_GET['u'];
-$pro_work = @$_GET['w'];
+$user = mysql_real_escape_string($_GET['u']);
+$pro_work = mysql_real_escape_string($_GET['w']);
 if(isset($_GET['u'])){
     $get_pro=  mysql_query("SELECT * FROM users WHERE u_id ='".$user."'")or die(mysql_error());
 
@@ -26,7 +26,7 @@ if(isset($_GET['w'])){
         <meta charset="UTF-8">
         <title><?php
         if(!isset($_SESSION['ufname'])){
-            echo 'log in';
+            echo 'Log in';
         }elseif (!$_GET["u"]) {
            
         }  else {
@@ -73,18 +73,18 @@ if(!isset($_SESSION['ufname'])){
             Die('<meta http-equiv="refresh" content="2;">enter all fields');
 
         }else {
-            $valEmail = $_POST['email'];
+            $valEmail = mysql_real_escape_string($_POST['email']);
             $level_check = mysql_query("SELECT * FROM users where u_email ='".$valEmail."'");
                         $rowLevel = mysql_fetch_array($level_check);
-                        if($rowLevel['u_level'] ==   0){
+                        if($rowLevel['u_level'] == 0){
                         echo '
-                          <b>If you have registered ..You need to activate the account</b>';
+                          <b>If you have registered ..You have to activate the account</b>';
                         }  else {
         //التأكد المدخلات صحيحة
         $sql  = mysql_query("SELECT * FROM users WHERE u_email='".$uemail."' AND u_pass='".$upass."' ")OR DIE (MYSQL_ERROR());
         $row  =  mysql_fetch_assoc($sql);
         if (!$row) {
-            Die('Password or E-mail error !! .. <meta http-equiv="refresh" content="3;">');
+            Die('Login Failed!!<br />Try Again... <meta http-equiv="refresh" content="3;">');
         }
 
           }
@@ -103,7 +103,7 @@ if(!isset($_SESSION['ufname'])){
             $_SESSION['city']=$row['u_city'];
             $_SESSION['membership']=$row['u_membership'];
 
-            echo '<meta http-equiv="refresh" content="1;">It has been successfully LogIN ';
+            echo '<meta http-equiv="refresh" content="1;">You Have Been Successfully Logged In, Redirecting...';
 
              }}}
             echo '</center>';
@@ -138,6 +138,7 @@ if(!isset($_SESSION['ufname'])){
 $imgProfileCode = md5( strtolower( trim( $row_pro['u_email'] ) ) );
         
 if($num1 <= 0){
+    
     echo '<h1>404  Page not found · 💔</h1>';
 exit;}  
 if (!empty($_GET['w'])) {
